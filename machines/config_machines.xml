@@ -2499,10 +2499,12 @@ This allows using a different mpirun command to launch unit tests
 	<!--	<command name="mkl">mkl </command> -->
       </modules>
       <modules mpilib="mpi-serial">
+	<command name="load">hdf5/1.10.4</command>
         <command name="load">netcdf/4.6.2</command>
       </modules>
       <modules mpilib="!mpi-serial">
         <command name="load">pnetcdf/1.12.2</command>
+	<command name="load">phdf5/1.10.4</command>
         <command name="load">parallel-netcdf/4.6.2</command>
       </modules>
     </module_system>
