@@ -661,10 +661,11 @@ This allows using a different mpirun command to launch unit tests
       <modules compiler="nvhpc">
         <command name="load">nvhpc/22.2</command>
       </modules>
-      <modules compiler="intel" mpilib="mpt" DEBUG="TRUE">
+<!--      <modules compiler="intel" mpilib="mpt" DEBUG="TRUE">
         <command name="use">/glade/p/cesmdata/cseg/PROGS/modulefiles/esmfpkgs/intel/19.1.1/</command>
         <command name="load">esmf-8.4.0-ncdfio-mpt-g</command>
-      </modules>
+      </modules> 
+-->
       <modules compiler="intel" mpilib="mpt" DEBUG="FALSE">
         <command name="use">/glade/p/cesmdata/cseg/PROGS/modulefiles/esmfpkgs/intel/19.1.1/</command>
         <command name="load">esmf-8.4.0-ncdfio-mpt-O</command>
@@ -816,10 +817,10 @@ This allows using a different mpirun command to launch unit tests
         <command name="load">netcdf/4.9.0</command>
       </modules>
       <modules compiler="!pgi" DEBUG="FALSE">
-        <command name="load">pio/2.5.9</command>
+        <command name="load">pio/2.5.10</command>
       </modules>
       <modules compiler="!pgi" DEBUG="TRUE">
-        <command name="load">pio/2.5.9d</command>
+        <command name="load">pio/2.5.10d</command>
       </modules>
     </module_system>
     <environment_variables>
@@ -827,6 +828,12 @@ This allows using a different mpirun command to launch unit tests
       <env name="TMPDIR">/glade/scratch/$USER</env>
       <env name="MPI_TYPE_DEPTH">16</env>
       <env name="MPI_USE_ARRAY"/>
+    </environment_variables>
+    <environment_variables DEBUG="TRUE" compiler="intel">
+      <env name="ESMFMKFILE">/glade/work/jedwards/sandboxes/ESMF/lib/libg/Linux.intel.64.mpt.default/esmf.mk</env> 
+    </environment_variables>
+    <environment_variables DEBUG="FALSE" compiler="intel">
+      <env name="ESMFMKFILE">/glade/work/jedwards/sandboxes/ESMF/lib/libO/Linux.intel.64.mpt.default/esmf.mk</env> 
     </environment_variables>
     <environment_variables comp_interface="nuopc">
       <env name="ESMF_RUNTIME_PROFILE">ON</env>
