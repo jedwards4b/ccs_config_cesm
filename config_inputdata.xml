@@ -8,6 +8,12 @@
   <!-- it will be searched for filename and chksum of each downloaded file.  -->
   <!-- see the file ftp://ftp.cgd.ucar.edu/cesm/inputdata_chksum.dat for proper format. -->
   <server>
+    <protocol>globus</protocol>
+    <address>c1f3a4b6-2163-11e8-b75c-0ac6873fc732:ftp/cesm/inputdata/</address>
+    <checksum>../inputdata_checksum.dat</checksum>
+  </server>
+
+  <server>
     <comment>grid ftp requires the globus-url-copy tool on the client side </comment>
     <protocol>gftp</protocol>
     <address>ftp://gridanon.cgd.ucar.edu:2811/cesm/inputdata/</address>

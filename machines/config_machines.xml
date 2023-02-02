@@ -585,6 +585,7 @@ This allows using a different mpirun command to launch unit tests
     <MAX_TASKS_PER_NODE>36</MAX_TASKS_PER_NODE>
     <MAX_MPITASKS_PER_NODE>36</MAX_MPITASKS_PER_NODE>
     <PROJECT_REQUIRED>TRUE</PROJECT_REQUIRED>
+    <GLOBUS_ENDPOINT_ID>d33b3614-6d04-11e5-ba46-22000b92c6ec</GLOBUS_ENDPOINT_ID>
 
     <mpirun mpilib="default">
       <executable>mpiexec_mpt</executable>
@@ -1837,17 +1838,18 @@ This allows using a different mpirun command to launch unit tests
     <COMPILERS>intel,gnu,cray,nvhpc,oneapi</COMPILERS>
     <MPILIBS>mpich</MPILIBS>
     <CIME_OUTPUT_ROOT>/glade/gust/scratch/$ENV{USER}</CIME_OUTPUT_ROOT>
-    <DIN_LOC_ROOT>/glade/p/cesmdata/inputdata</DIN_LOC_ROOT>
-    <DIN_LOC_ROOT_CLMFORC>/glade/p/cesmdata/inputdata/atm/datm7</DIN_LOC_ROOT_CLMFORC>
+    <DIN_LOC_ROOT>/glade/gust/p/cesmdata/inputdata</DIN_LOC_ROOT>
+    <DIN_LOC_ROOT_CLMFORC>/glade/gust/p/cesmdata/inputdata/atm/datm7</DIN_LOC_ROOT_CLMFORC>
     <DOUT_S_ROOT>$CIME_OUTPUT_ROOT/archive/$CASE</DOUT_S_ROOT>
-    <BASELINE_ROOT>/glade/p/cesmdata/ccsm_baselines</BASELINE_ROOT>
-    <CCSM_CPRNC>/glade/p/cesmdata/cprnc/cprnc</CCSM_CPRNC>
+    <BASELINE_ROOT>/glade/gust/p/cesmdata/ccsm_baselines</BASELINE_ROOT>
+    <CCSM_CPRNC>/glade/gust/p/cesmdata/cprnc/cprnc</CCSM_CPRNC>
     <GMAKE_J>16</GMAKE_J>
     <BATCH_SYSTEM>pbs</BATCH_SYSTEM>
     <SUPPORTED_BY>cseg</SUPPORTED_BY>
     <MAX_TASKS_PER_NODE>128</MAX_TASKS_PER_NODE>
     <MAX_MPITASKS_PER_NODE>128</MAX_MPITASKS_PER_NODE>
     <PROJECT_REQUIRED>TRUE</PROJECT_REQUIRED>
+    <GLOBUS_ENDPOINT_ID>d33b3614-6d04-11e5-ba46-22000b92c6ec</GLOBUS_ENDPOINT_ID>
     <mpirun mpilib="default">
       <executable>mpiexec</executable>
       <arguments>
