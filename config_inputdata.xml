@@ -14,20 +14,13 @@
   </server>
 
   <server>
-    <comment>grid ftp requires the globus-url-copy tool on the client side </comment>
-    <protocol>gftp</protocol>
-    <address>ftp://gridanon.cgd.ucar.edu:2811/cesm/inputdata/</address>
-    <checksum>../inputdata_checksum.dat</checksum>
-  </server>
-
-  <server>
     <protocol>wget</protocol>
     <address>ftp://ftp.cgd.ucar.edu/cesm/inputdata/</address>
     <user>anonymous</user>
     <password>user@example.edu</password>
     <checksum>../inputdata_checksum.dat</checksum>
   </server>
-
+  
   <server>
     <comment> ftp requires the python package ftplib </comment>
     <protocol>ftp</protocol>
@@ -51,5 +44,6 @@
     <!-- one per line where the date stamp indicates the last modification time of the file -->
     <inventory>../listing.csv</inventory>
   </server>
+
 
 </inputdata>
