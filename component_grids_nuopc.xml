@@ -348,8 +348,9 @@
     <desc>gx3v7 is displaced Greenland pole v7 3-deg grid:</desc>
   </domain>
   <domain name="tx0.66v1">
-    <nx>540</nx> <ny>458</ny>
-    <mesh>$DIN_LOC_ROOT/share/meshes/tx0.66v1_190314_ESMFmesh.nc</mesh>
+    <nx>540</nx> <ny>480</ny>
+    <!-- <mesh>$DIN_LOC_ROOT/share/meshes/tx0.66v1_190314_ESMFmesh.nc</mesh> -->
+    <mesh>/glade/work/gmarques/cesm/tx2_3/mesh/tx2_3_mesh_230105_cdf5.nc</mesh>
     <desc>tx0.66v1 is tripole v1 0.66-deg MOM6 grid:</desc>
     <support>Experimental for MOM6 experiments</support>
   </domain>
@@ -401,7 +402,7 @@
   <domain name="r05mz_amazon">
     <nx>816</nx> <ny>1</ny>
     <mesh>$DIN_LOC_ROOT/rof/mizuRoute/meshes/r05_amazon_c110308_ctrcrd_cdf5_ESMFmesh_c20200624.nc</mesh>
-    <desc>r05_amazon is the regular 1/2 degree river routing grid, but over a region in the Amazon 
+    <desc>r05_amazon is the regular 1/2 degree river routing grid, but over a region in the Amazon
     (corresponds to the 5x5_amazon region for CTSM) </desc>
   </domain>
   <domain name="HDMAmz">
