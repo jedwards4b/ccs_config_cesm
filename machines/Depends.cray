@@ -1,4 +1,5 @@
-NOOPTOBJS= ice_boundary.o dyn_comp.o unicon.o
+NOOPTOBJS= ice_boundary.o dyn_comp.o unicon.o m_dom_dom.o
 
 $(NOOPTOBJS): %.o: %.F90
 	$(FC) -c $(INCLDIR) $(INCS) $(FFLAGS) $(FFLAGS_NOOPT) $(FREEFLAGS) $<
+
