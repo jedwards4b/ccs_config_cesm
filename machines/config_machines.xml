@@ -1667,8 +1667,8 @@ This allows using a different mpirun command to launch unit tests
       </modules>
       <modules mpilib="impi">
         <command name="load">impi/22.2.0</command>
-        <command name="load">pnetcdf/1.11.2</command>
-        <command name="load">parallel-netcdf/4.6.2</command>
+        <command name="load">pnetcdf/1.12.3</command>
+        <command name="load">parallel-netcdf/4.9.0</command>
       </modules>
       <modules mpilib="mvapich">
         <command name="rm">impi</command>
@@ -1683,10 +1683,10 @@ This allows using a different mpirun command to launch unit tests
     <environment_variables>
       <env name="OMP_STACKSIZE">256M</env>
       <env name="UCX_DC_MLX5_RETRY_COUNT">20</env>
-      <env name="ESMFMKFILE">/scratch3/projects/csa_gettelman/esmf-8.4.1b02_intel22.2.0_impi22.2.0/lib/libO/Linux.intel.64.intelmpi.default/esmf.mk</env>
+      <env name="ESMFMKFILE">/scratch3/projects/csa_gettelman/esmf-8.6.0b04_intel23.0.0_impi23.0.0/lib/libO/Linux.intel.64.intelmpi.default/esmf.mk</env>
       <env name="ESMF_RUNTIME_PROFILE">ON</env>
       <env name="ESMF_RUNTIME_PROFILE_OUTPUT">SUMMARY</env>
-      <env name="PIO">/scratch3/projects/csa_gettelman/intel22.2.0_impi22.2.0/pio2_5_10_avx512</env>
+      <env name="PIO">/scratch3/projects/csa_gettelman/intel23.0.0_impi23.0.0/pio2_6_2_avx512</env>
     </environment_variables>
     <environment_variables mpilib="impi">
       <env name="MY_MPIRUN_OPTIONS">-prepend-rank </env>
