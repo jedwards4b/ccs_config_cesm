@@ -1687,14 +1687,15 @@ This allows using a different mpirun command to launch unit tests
       <env name="ESMF_RUNTIME_PROFILE">ON</env>
       <env name="ESMF_RUNTIME_PROFILE_OUTPUT">SUMMARY</env>
       <env name="PIO">/scratch3/projects/csa_gettelman/intel23.0.0_impi23.0.0/pio2_6_2_avx512</env>
+      <env name="UCX_IB_SL">3</env>
     </environment_variables>
     <environment_variables mpilib="impi">
       <env name="MY_MPIRUN_OPTIONS">-prepend-rank </env>
-      <env name="I_MPI_ADJUST_ALLREDUCE">4</env>
+<!--      <env name="I_MPI_ADJUST_ALLREDUCE">4</env>
       <env name="I_MPI_ADJUST_GATHER">3</env>
       <env name="I_MPI_ADJUST_GATHERV">3</env>
       <env name="I_MPI_ADJUST_SCATTER">3</env>
-      <env name="I_MPI_ADJUST_SCATTERV">2</env>
+      <env name="I_MPI_ADJUST_SCATTERV">2</env> -->
       <env name="I_MPI_EXTRA_FILESYSTEM">enable</env>
      </environment_variables>
   <environment_variables mpilib="mvapich">
