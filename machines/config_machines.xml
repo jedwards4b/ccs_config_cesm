@@ -1662,13 +1662,13 @@ This allows using a different mpirun command to launch unit tests
         <command name="purge"></command>
         <command name="load">TACC</command>
         <command name="use">/scratch1/projects/compilers/modulefiles</command>
-        <command name="load">intel/22.2.0</command>
-        <command name="load">cmake/3.24.2</command>
+        <command name="load">intel/23.0.0</command>
+        <command name="load">cmake</command>
       </modules>
       <modules mpilib="impi">
-        <command name="load">impi/22.2.0</command>
-        <command name="load">pnetcdf/1.11.2</command>
-        <command name="load">parallel-netcdf/4.6.2</command>
+        <command name="load">impi</command>
+        <command name="load">pnetcdf/1.12.3</command>
+        <command name="load">parallel-netcdf/4.9.0</command>
       </modules>
       <modules mpilib="mvapich">
         <command name="rm">impi</command>
@@ -1677,16 +1677,16 @@ This allows using a different mpirun command to launch unit tests
         <command name="load">parallel-netcdf/4.6.2</command>
       </modules>
       <modules mpilib="mpi-serial">
-        <command name="load">netcdf/4.6.2</command>
+        <command name="load">netcdf/4.9.0</command>
       </modules>
     </module_system>
     <environment_variables>
       <env name="OMP_STACKSIZE">256M</env>
       <env name="UCX_DC_MLX5_RETRY_COUNT">20</env>
-      <env name="ESMFMKFILE">/scratch3/projects/csa_gettelman/esmf-8.4.1b02_intel22.2.0_impi22.2.0/lib/libO/Linux.intel.64.intelmpi.default/esmf.mk</env>
+      <env name="ESMFMKFILE">/scratch3/projects/csa_gettelman/esmf-8.5.0b28/intel23.0.0_impi23.0.0/lib/libO/Linux.intel.64.intelmpi.default/esmf.mk</env>
       <env name="ESMF_RUNTIME_PROFILE">ON</env>
       <env name="ESMF_RUNTIME_PROFILE_OUTPUT">SUMMARY</env>
-      <env name="PIO">/scratch3/projects/csa_gettelman/intel22.2.0_impi22.2.0/pio2_5_10_avx512</env>
+      <env name="PIO">/scratch3/projects/csa_gettelman/intel22.2.0_impi22.2.0/pio2_6_0_avx512</env>
     </environment_variables>
     <environment_variables mpilib="impi">
       <env name="MY_MPIRUN_OPTIONS">-prepend-rank </env>
