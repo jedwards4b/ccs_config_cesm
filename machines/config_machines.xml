@@ -1297,25 +1297,26 @@ This allows using a different mpirun command to launch unit tests
       <cmd_path lang="sh">module</cmd_path>
       <cmd_path lang="csh">module</cmd_path>
       <modules>
-	<command name="load">cesmdev/1.0</command>
-	<command name="load">ncarenv/23.06</command>
         <command name="purge"/>
+	<command name="load">cesmdev/1.0</command>
+	<command name="load">ncarenv/dev17f</command>
 	<command name="load">craype</command>
       </modules>
       <modules compiler="intel">
-        <command name="load">intel/2023.0.0</command>
+        <command name="load">intel/2023.2.1</command>
 	<command name="load">mkl</command>
       </modules>
       <modules compiler="intel-oneapi">
-        <command name="load">intel-oneapi/2023.0.0</command>
+        <command name="load">intel-oneapi/2023.2.1</command>
 	<command name="load">mkl</command>
       </modules>
       <modules compiler="intel-classic">
-        <command name="load">intel-classic/2023.0.0</command>
+        <command name="load">intel-classic/2023.2.1</command>
 	<command name="load">mkl</command>
       </modules>
       <modules compiler="cray">
-        <command name="load">cce/15.0.1</command>
+        <command name="load">cce/17.0.0.x</command>
+	<command name="load">gcc-mixed/12.2.0</command> 
         <command name="load">cray-libsci/23.02.1.1</command>
       </modules>
       <modules compiler="gnu">
@@ -1323,7 +1324,7 @@ This allows using a different mpirun command to launch unit tests
         <command name="load">cray-libsci/23.02.1.1</command>
       </modules>
       <modules compiler="nvhpc">
-        <command name="load">nvhpc/23.5</command>
+        <command name="load">nvhpc/23.7</command>
       </modules>
 
       <modules>
@@ -1332,13 +1333,14 @@ This allows using a different mpirun command to launch unit tests
       </modules>
       <modules mpilib="mpich">
 	<command name="load">cray-mpich/8.1.25</command>
+	<command name="rm">netcdf hdf5</command>
       </modules>
       <modules mpilib="mpi-serial">
         <command name="load">mpi-serial/2.3.0</command>
       </modules>
 
       <modules mpilib="mpich" compiler="nvhpc" gpu_offload="!none">
-        <command name="load">cuda/11.7.1</command>
+        <command name="load">cuda/12.2.1</command>
       </modules>
 
       <modules mpilib="mpi-serial">
@@ -1352,12 +1354,12 @@ This allows using a different mpirun command to launch unit tests
 
       <modules DEBUG="TRUE">
 	<command name="load">parallelio/2.6.2-debug</command>
-	<command name="load">esmf/8.6.0b04-debug</command>
+	<command name="load">esmf/8.6.0b13-debug</command>
       </modules>
 
       <modules DEBUG="FALSE">
 	<command name="load">parallelio/2.6.2</command>
-	<command name="load">esmf/8.6.0b04</command>
+	<command name="load">esmf/8.5.0</command>
       </modules>
     </module_system>
 
