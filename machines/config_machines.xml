@@ -50,6 +50,7 @@ This allows using a different mpirun command to launch unit tests
 
 <config_machines version="3.0">
   <NODENAME_REGEX>
+    <value MACH="gh1">gh[12].frontera.*</value>
     <value MACH="aleph">.*eth\d</value>
     <value MACH="athena">.*.cluster.net</value>
     <value MACH="aws-hpc6a">regular-dy-computehpc6a-.*</value>
