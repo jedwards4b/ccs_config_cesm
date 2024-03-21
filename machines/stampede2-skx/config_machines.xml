@@ -3,7 +3,7 @@
     <DESC>Intel Xeon Platinum 8160 ("Skylake"),48 cores on two sockets (24 cores/socket) , batch system is SLURM</DESC>
     <OS>LINUX</OS>
     <COMPILERS>intel</COMPILERS>
-    <MPILIBS>impi,mvapich2</MPILIBS>
+    <MPILIBS>impi,mvapich</MPILIBS>
     <CIME_OUTPUT_ROOT>$ENV{SCRATCH}</CIME_OUTPUT_ROOT>
     <DIN_LOC_ROOT>/work/02503/edwardsj/CESM/inputdata</DIN_LOC_ROOT>
     <DIN_LOC_ROOT_CLMFORC>/work/02503/edwardsj/CESM/inputdata/lmwg</DIN_LOC_ROOT_CLMFORC>
@@ -21,7 +21,7 @@
         <arg name="ntasks"> -n {{ total_tasks }} </arg>
       </arguments>
     </mpirun>
-    <mpirun mpilib="mvapich2">
+    <mpirun mpilib="mvapich">
       <executable>ibrun</executable>
       <arguments>
         <arg name="ntasks"> -n {{ total_tasks }} </arg>
@@ -39,32 +39,34 @@
       <modules>
         <command name="purge"></command>
         <command name="load">TACC</command>
-        <command name="load">python/2.7.13</command>
-        <command name="load">intel/18.0.2</command>
-        <command name="load">cmake/3.16.1</command>
+        <command name="load">intel/24.0</command>
+        <command name="load">cmake/3.28.1</command>
       </modules>
-      <modules mpilib="mvapich2">
-        <command name="load">mvapich2/2.3.1</command>
-        <command name="load">pnetcdf/1.11</command>
-        <command name="load">parallel-netcdf/4.6.2</command>
+      <modules mpilib="mvapich">
+        <command name="load">mvapich/3.0</command>
+        <command name="load">pnetcdf/1.12.3</command>
+        <command name="load">parallel-netcdf/4.9.2</command>
       </modules>
       <modules mpilib="impi">
-        <command name="rm">mvapich2</command>
-        <command name="load">impi/18.0.2</command>
-        <command name="load">pnetcdf/1.11</command>
-        <command name="load">parallel-netcdf/4.6.2</command>
+        <command name="load">impi/21.11</command>
+        <command name="load">pnetcdf/1.12.3</command>
+        <command name="load">parallel-netcdf/4.9.2</command>
       </modules>
       <modules mpilib="mpi-serial">
-        <command name="load">netcdf/4.3.3.1</command>
+        <command name="load">netcdf/4.9.2</command>
       </modules>
     </module_system>
     <environment_variables>
       <env name="OMP_STACKSIZE">256M</env>
      </environment_variables>
-    <environment_variables comp_interface="nuopc" mpilib="impi">
-      <env name="ESMFMKFILE">/work/01118/tg803972/stampede2/ESMF-INSTALL/8.0.0bs38/lib/libO/Linux.intel.64.intelmpi.default/esmf.mk</env>
+    <environment_variables mpilib="impi">
+      <env name="ESMFMKFILE">/work2/02503/edwardsj/stampede3/intel24.0/esmf/v8.6.1b03/lib/libO/Linux.intel.64.intelmpi.default/esmf.mk</env>
+      <env name="PIO_VERSION_MAJOR">2</env>
+      <env name="PIO_LIBDIR">/work2/02503/edwardsj/stampede3/intel24.0/parallelio2.6.3rc1/lib</env>
+      <env name="PIO_INCDIR">/work2/02503/edwardsj/stampede3/intel24.0/parallelio2.6.3rc1/include</env>
+      <env name="PIO_TYPENAME_VALID_VALUES">netcdf,pnetcdf,netcdf4p,netcdf4c</env>
     </environment_variables>
-    <environment_variables comp_interface="nuopc">
+    <environment_variables>
       <env name="ESMF_RUNTIME_PROFILE">ON</env>
       <env name="ESMF_RUNTIME_PROFILE_OUTPUT">SUMMARY</env>
       <env name="UGCSINPUTPATH">/work/06242/tg855414/stampede2/FV3GFS/benchmark-inputs/2012010100/gfs/fcst</env>
