@@ -685,20 +685,20 @@
   </batch_system>
 
   <batch_system MACH="stampede2-skx" type="slurm" >
-    <batch_submit>ssh stampede2.tacc.utexas.edu cd $CASEROOT ; sbatch</batch_submit>
+    <batch_submit>ssh login2.stampede3.tacc.utexas.edu cd $CASEROOT ; sbatch</batch_submit>
     <submit_args>
       <argument> --time $JOB_WALLCLOCK_TIME </argument>
       <argument> -p $JOB_QUEUE </argument>
       <argument> --account $PROJECT </argument>
     </submit_args>
     <queues>
-      <queue walltimemax="48:00:00" nodemin="1" nodemax="256" default="true">skx-normal</queue>
+      <queue walltimemax="48:00:00" nodemin="1" nodemax="256" default="true">skx</queue>
       <queue walltimemax="02:00:00" nodemin="1" nodemax="4" >skx-dev</queue>
     </queues>
   </batch_system>
 
   <batch_system MACH="stampede2-knl" type="slurm" >
-    <batch_submit>ssh stampede2.tacc.utexas.edu cd $CASEROOT ; sbatch</batch_submit>
+    <batch_submit>sbatch</batch_submit>
     <submit_args>
       <argument> --time $JOB_WALLCLOCK_TIME </argument>
       <argument> -p $JOB_QUEUE </argument>
