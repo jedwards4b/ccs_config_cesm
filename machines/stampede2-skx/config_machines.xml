@@ -52,6 +52,7 @@
         <command name="rm">mvapich2</command>
         <command name="load">impi/18.0.2</command>
         <command name="load">pnetcdf/1.11</command>
+	<command name="load">phdf5/1.14.3</command>
         <command name="load">parallel-netcdf/4.6.2</command>
       </modules>
       <modules mpilib="mpi-serial">
