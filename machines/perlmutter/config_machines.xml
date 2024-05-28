@@ -1,7 +1,7 @@
   <machine MACH="perlmutter">
     <DESC>NERSC EX AMD EPYC, os is CNL, 64 pes/node, batch system is Slurm</DESC>
     <OS>CNL</OS>
-    <COMPILERS>gnu,cray,nvidia,aocc</COMPILERS>
+    <COMPILERS>intel,gnu,cray,nvidia,aocc</COMPILERS>
     <MPILIBS>mpich</MPILIBS>
     <PROJECT>mp9_g</PROJECT>
     <CIME_OUTPUT_ROOT>$ENV{SCRATCH}</CIME_OUTPUT_ROOT>
@@ -25,7 +25,7 @@
         <arg name="binding"> -c {{ srun_binding }}</arg>
       </arguments>
     </mpirun>
-    <module_system type="module">
+    <module_system type="module" allow_error="true">
       <init_path lang="perl">/usr/share/lmod/lmod/init/perl</init_path>
       <init_path lang="python">/usr/share/lmod/lmod/init/env_modules_python.py</init_path>
       <init_path lang="sh">/usr/share/lmod/lmod/init/sh</init_path>
@@ -61,11 +61,14 @@
         <command name="load">PrgEnv-gnu</command>
 	
       </modules>
-      <modules>
-        <command name="swap">craype craype/2.7.30</command>
+      <modules compiler="intel">
+        <command name="load">PrgEnv-intel</command>
       </modules>
       <modules>
-        <command name="switch">cray-libsci/23.12.5</command>
+        <command name="load">craype/2.7.30</command>
+      </modules>
+      <modules>
+        <command name="load">cray-libsci/23.12.5</command>
       </modules>
       <modules>
         <command name="load">cray-mpich/8.1.28</command>
@@ -88,7 +91,6 @@
     </module_system>
     <environment_variables>
       <env name="OMP_STACKSIZE">256M</env>
-<!--      <env name="OMP_PROC_BIND">spread</env>
-      <env name="OMP_PLACES">threads</env> -->
+      <env name="ESMFMKFILE">/global/homes/j/jedwards/esmf/lib/libO/Unicos.intel.64.mpi.default/esmf.mk</env>
     </environment_variables>
   </machine>
