@@ -38,7 +38,7 @@ ifeq ($(DEBUG),FALSE)
   $(PERFOBJS): %.o: %.F90
 	  $(FC) -c $(INCLDIR) $(INCS) $(FFLAGS) $(FREEFLAGS)  -O3  -no-prec-div $<
   $(REDUCED_OPT_OBJS): %.o: %.F90
-	  $(FC) -c $(INCLDIR) $(INCS) $(FFLAGS) $(FREEFLAGS)  -O1 $<
+	  $(FC) -c $(INCLDIR) $(INCS) $(FFLAGS) $(FREEFLAGS)  -O0 $<
   $(REDUCED_PRECISION_OBJS): %.o: %.F90
 	  $(FC) -c $(INCLDIR) $(INCS) $(FFLAGS) $(FREEFLAGS) -fimf-precision=low -fp-model fast $<
   $(SHR_RANDNUM_FORT_OBJS): %.o: %.F90
