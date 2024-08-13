@@ -44,15 +44,15 @@
 	<command name="load">craype</command>
       </modules>
       <modules compiler="intel">
-        <command name="load">intel/2023.2.1</command>
+        <command name="load">intel/2024.0.2</command>
 	<command name="load">mkl</command>
       </modules>
       <modules compiler="intel-oneapi">
-        <command name="load">intel-oneapi/2023.2.1</command>
+        <command name="load">intel-oneapi/2024.0.2</command>
 	<command name="load">mkl</command>
       </modules>
       <modules compiler="intel-classic">
-        <command name="load">intel-classic/2023.2.1</command>
+        <command name="load">intel-classic/2024.0.2</command>
 	<command name="load">mkl</command>
       </modules>
       <modules compiler="cray">

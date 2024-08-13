@@ -1,1 +1,1 @@
-set(PFUNIT_PATH "$GITHUB_WORKSPACE/pfunit/build")
+set(PFUNIT_PATH "$ENV{GITHUB_WORKSPACE}/pfunit/build")
