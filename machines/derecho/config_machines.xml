@@ -136,4 +136,7 @@
     <environment_variables gpu_type="!none">
       <env name="NCAR_LIBS_CUDA">-lcuda -lcudart</env>
     </environment_variables>
+    <environment_variables compiler="intel">
+      <env name="TORCH_LIBRARY">/glade/work/jedwards/conda-envs/ml5.6/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so</env>
+    </environment_variables>
   </machine>
